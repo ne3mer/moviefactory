@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - Movie_Factory</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v[19.2.0]/dist/font-face.css" rel="stylesheet" type="text/css" />
+    </environment>
+</head>
+<body style="background-color:lightgrey">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <a class="navbar-brand text-success" href="/">
+
+            <img src="~/images/Template/MF-logo.png" width="50" height="50" class="d-inline-block " alt="">
+            <span class="inline">Movie Factory</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right align-top" id="navContent" >
+            <ul class="navbar-nav mx-auto">
+                <li><hr class="my-0 bg-light" /></li>
+                <li class="nav-item active pl-5">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link text-secondary">
+                        <i class="fas fa-home"></i>
+                        خانه
+                    </a>
+                </li>
+                <li><hr class="my-0 bg-light" /></li>
+                <li class="nav-item pl-5">
+                    <a asp-area="" asp-controller="Products" asp-action="Index" class="nav-link text-secondary">
+                        <i class="fas fa-film"></i>
+                        فیلم ها
+                    </a>
+                </li>
+                <li><hr class="my-0 bg-light" /></li>
+                <li class="nav-item pl-5">
+                    <a asp-area="" asp-controller="Home" asp-action="About" class="nav-link text-secondary">
+                        <i class="fas fa-info"></i>
+
+
+                        درباره ما
+                    </a>
+                </li>
+                <li><hr class="my-0 bg-light" /></li>
+                <li class="nav-item pl-5">
+                    <a asp-area="" asp-controller="Home" asp-action="Contact" class="nav-link text-secondary">
+                        <i class="fas fa-headset"></i>
+                        تماس با ما
+                    </a>
+                </li>
+                <li><hr class="my-0 bg-light" /></li>
+                <partial name="_LoginPartial" />
+            </ul>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="text-center">
+            <h3 class="text-center">
+                <a href="#" target="_blank" class="text-info"><i class="fab fa-telegram" title="تلگرام "></i></a>&nbsp;&nbsp;
+                <a href="#" target="_blank" class="text-warning"><i class="fab fa-instagram" title="اینستاگرام "></i></a>&nbsp;&nbsp;
+                <a href="#" target="_blank" class="text-success"><i class="fab fa-twitter" title="توییتر "></i></a>&nbsp;&nbsp;
+                <a href="#" target="_blank" class="text-primary"><i class="fab fa-facebook" title="فیسبوک "></i></a>&nbsp;&nbsp;
+                <a href="#" target="_blank" title="ایمیل " class="text-danger"><i class="far fa-envelope"></i></a>&nbsp;&nbsp;
+            </h3>
+            <p>&copy; 2019 - Movie_Factory</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/font-awesome/all.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" asp-fallback-src="~/lib/jquery/dist/jquery-3.3.1.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
