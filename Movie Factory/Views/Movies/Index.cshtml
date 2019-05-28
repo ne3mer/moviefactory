@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MovieFactory.Models.Movie>
+
+@{
+    ViewData["Title"] = "نمایش فیلم ها";
+}
+
+<h2 class="text-center text-danger">خانه</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>ردیف</th>
+            <th>عنوان</th>
+            <th>جزییات</th>
+            <th>ویرایش</th>
+            <th>حذف</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var i = 1;}
+        @foreach (var movie in Model)
+        {
+            
+
+
+        <tr>
+            <td class="align-middle"> @i</td>
+           
+            <td class="align-middle">@movie.Title</td>
+            <td class="align-middle">@movie.Genre</td>
+            <td class="align-middle">
+                <a asp-action="details" asp-controller="movies" asp-route-id="@movie.Id"> <i class="fas fa-info text-black-50"></i></a>
+            </td>
+            <td class="align-middle">
+                <a asp-controller="movies" asp-action="delete" asp-route-id="@movie.Id"> <i class="fas fa-trash-alt text-black-50"></i></a>
+            </td>
+        </tr>
+            <tr>
+                
+            </tr>
+            <tr>
+            </tr>
+
+            i++;
+        }
+    </tbody>
+</table>
+

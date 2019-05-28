@@ -2,6 +2,7 @@
 body {
     direction: rtl !important;
     font-family: 'Vazir', sans-serif;
+    background-color:lightgrey;
 }
 
 @font-face {
